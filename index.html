@@ -40,6 +40,20 @@
         tr:nth-child(even) {
             background-color: #f9fafb;
         }
+        .btn {
+            background-color: #e5e7eb;
+            color: #1f2937;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .btn:hover {
+            background-color: #d1d5db;
+        }
         .btn-active {
             background-color: #1f2937;
             color: white;
@@ -55,15 +69,15 @@
             <p class="text-gray-600">Quick-reference tables for last-minute revision</p>
         </header>
 
-        <div class="flex flex-wrap justify-center space-x-2 md:space-x-4 mb-8">
-            <button class="btn btn-active px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-cabinet">Cabinet Ministries</button>
-            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-states">States & Capitals</button>
-            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-ranks">Defence Ranks</button>
-            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-revolutions">Revolutions</button>
-            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-wars">Wars Fought</button>
-            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-passes">Important Passes</button>
-            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-sindoor">Operation Sindoor</button>
-            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-pm-visits">PM's Foreign Visits</button>
+        <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+            <button class="btn btn-active" data-target="table-cabinet">Cabinet Ministries</button>
+            <button class="btn" data-target="table-states">States & Capitals</button>
+            <button class="btn" data-target="table-ranks">Defence Ranks</button>
+            <button class="btn" data-target="table-revolutions">Revolutions</button>
+            <button class="btn" data-target="table-wars">Wars Fought</button>
+            <button class="btn" data-target="table-passes">Important Passes</button>
+            <button class="btn" data-target="table-sindoor">Operation Sindoor</button>
+            <button class="btn" data-target="table-pm-visits">PM's Foreign Visits</button>
         </div>
 
         <div id="table-container">
@@ -286,21 +300,23 @@
 
             <!-- Operation Sindoor Table -->
             <div id="table-sindoor" class="table-content hidden">
-                <h2 class="text-2xl font-bold mb-4">Operation Sindoor</h2>
+                <h2 class="text-2xl font-bold mb-4">Operation Sindoor: A Visual Guide</h2>
                 <div class="table-container shadow-inner rounded-xl">
                     <table class="min-w-full">
                         <thead>
                             <tr>
-                                <th>Aspect</th>
+                                <th>Category</th>
                                 <th>Details</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>**Year**</td><td>2025</td></tr>
-                            <tr><td>**Context**</td><td>Indian military strikes in Pakistan and PoK following the Pahalgam terror attack in Jammu and Kashmir.</td></tr>
-                            <tr><td>**Strikes**</td><td>Precision air and artillery strikes on terror camps and infrastructure.</td></tr>
-                            <tr><td>**Weapons**</td><td>Reported use of air-launched BrahMos missiles, loitering munitions, and precision-guided bombs from Rafale and other aircraft.</td></tr>
-                            <tr><td>**Targets**</td><td>Nine key terror camps and facilities in Muridke, Bahawalpur, and other locations.</td></tr>
+                            <tr><td>**Date**</td><td>May 7, 2025</td></tr>
+                            <tr><td>**Reason**</td><td>Direct response to the deadly terror attack in Pahalgam, Jammu and Kashmir, which claimed 26 lives.</td></tr>
+                            <tr><td>**Location**</td><td>Terror infrastructure in Pakistan and Pakistan-occupied Kashmir (PoK), specifically in areas like Muridke, Bahawalpur, and Kotli.</td></tr>
+                            <tr><td>**Targets**</td><td>Nine key terror camps and facilities belonging to groups like Lashkar-e-Taiba (LeT) and Jaish-e-Mohammed (JeM).</td></tr>
+                            <tr><td>**Weapons Used**</td><td>Precision-guided missiles (including air-launched BrahMos and SCALP), HAMMER bombs, and loitering munitions.</td></tr>
+                            <tr><td>**Outcome**</td><td>Successful destruction of all nine targets without loss of Indian assets. The operation lasted for a total of 23 minutes.</td></tr>
+                            <tr><td>**Significance**</td><td>Demonstrated India's capacity for high-precision, coordinated action against cross-border terrorism, and a shift in India's counter-terrorism policy.</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -308,24 +324,27 @@
 
             <!-- PM Foreign Visits Table -->
             <div id="table-pm-visits" class="table-content hidden">
-                <h2 class="text-2xl font-bold mb-4">Recent Foreign Visits by PM (2025)</h2>
+                <h2 class="text-2xl font-bold mb-4">PM's Country Visits Along With Capitals (Late 2024 - Aug 2025)</h2>
                 <div class="table-container shadow-inner rounded-xl">
                     <table class="min-w-full">
                         <thead>
                             <tr>
+                                <th>Dates</th>
                                 <th>Countries Visited</th>
                                 <th>Capitals</th>
-                                <th>Month</th>
+                                <th>Awards/Honors Received</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>United Kingdom, Maldives</td><td>London, Malé</td><td>July</td></tr>
-                            <tr><td>Ghana, Trinidad & Tobago, Argentina, Brazil, Namibia</td><td>Accra, Port of Spain, Buenos Aires, Brasília, Windhoek</td><td>July</td></tr>
-                            <tr><td>Cyprus, Canada, Croatia</td><td>Nicosia, Ottawa, Zagreb</td><td>June</td></tr>
-                            <tr><td>Saudi Arabia</td><td>Riyadh</td><td>April</td></tr>
-                            <tr><td>Thailand, Sri Lanka</td><td>Bangkok, Sri Jayawardenepura Kotte</td><td>April</td></tr>
-                            <tr><td>Mauritius</td><td>Port Louis</td><td>March</td></tr>
-                            <tr><td>France, USA</td><td>Paris, Washington D.C.</td><td>February</td></tr>
+                            <tr><td>July 23-26, 2025</td><td>United Kingdom, Maldives</td><td>London, Malé</td><td>—</td></tr>
+                            <tr><td>July 2-9, 2025</td><td>Ghana, Trinidad & Tobago, Argentina, Brazil, Namibia</td><td>Accra, Port of Spain, Buenos Aires, Brasília, Windhoek</td><td>**Ghana:** The Officer of the Order of the Star of Ghana<br>**Trinidad & Tobago:** The Order of the Republic of Trinidad and Tobago<br>**Brazil:** The Grand Collar of the National Order of the Southern Cross<br>**Namibia:** Order of the Most Ancient Welwitschia Mirabilis</td></tr>
+                            <tr><td>June 15-19, 2025</td><td>Cyprus, Canada, Croatia</td><td>Nicosia, Ottawa, Zagreb</td><td>**Cyprus:** Grand Cross of the Order of Makarios III</td></tr>
+                            <tr><td>April 22, 2025</td><td>Saudi Arabia</td><td>Riyadh</td><td>—</td></tr>
+                            <tr><td>April 3-6, 2025</td><td>Thailand, Sri Lanka</td><td>Bangkok, Sri Jayawardenepura Kotte</td><td>**Sri Lanka:** Sri Lanka Mitra Vibhushana</td></tr>
+                            <tr><td>March 11-12, 2025</td><td>Mauritius</td><td>Port Louis</td><td>**Mauritius:** Grand Commander of the Order of the Star and Key of the Indian Ocean</td></tr>
+                            <tr><td>February 10-14, 2025</td><td>France, USA</td><td>Paris, Washington D.C.</td><td>—</td></tr>
+                            <tr><td>December 21-22, 2024</td><td>Kuwait</td><td>Kuwait City</td><td>**Kuwait:** The Order of Mubarak Al-Kabeer</td></tr>
+                            <tr><td>November 16-22, 2024</td><td>Nigeria, Brazil, Guyana</td><td>Abuja, Brasília, Georgetown</td><td>**Nigeria:** Grand Commander of the Order of the Niger<br>**Guyana:** Order of Excellence of Guyana</td></tr>
                         </tbody>
                     </table>
                 </div>
