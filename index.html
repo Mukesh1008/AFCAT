@@ -62,6 +62,8 @@
             <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-revolutions">Revolutions</button>
             <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-wars">Wars Fought</button>
             <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-passes">Important Passes</button>
+            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-sindoor">Operation Sindoor</button>
+            <button class="btn px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-colors duration-200" data-target="table-pm-visits">PM's Foreign Visits</button>
         </div>
 
         <div id="table-container">
@@ -281,6 +283,54 @@
                     </table>
                 </div>
             </div>
+
+            <!-- Operation Sindoor Table -->
+            <div id="table-sindoor" class="table-content hidden">
+                <h2 class="text-2xl font-bold mb-4">Operation Sindoor</h2>
+                <div class="table-container shadow-inner rounded-xl">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>**Year**</td><td>2025</td></tr>
+                            <tr><td>**Context**</td><td>Indian military strikes in Pakistan and PoK following the Pahalgam terror attack in Jammu and Kashmir.</td></tr>
+                            <tr><td>**Strikes**</td><td>Precision air and artillery strikes on terror camps and infrastructure.</td></tr>
+                            <tr><td>**Weapons**</td><td>Reported use of air-launched BrahMos missiles, loitering munitions, and precision-guided bombs from Rafale and other aircraft.</td></tr>
+                            <tr><td>**Targets**</td><td>Nine key terror camps and facilities in Muridke, Bahawalpur, and other locations.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PM Foreign Visits Table -->
+            <div id="table-pm-visits" class="table-content hidden">
+                <h2 class="text-2xl font-bold mb-4">Recent Foreign Visits by PM (2025)</h2>
+                <div class="table-container shadow-inner rounded-xl">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th>Countries Visited</th>
+                                <th>Capitals</th>
+                                <th>Month</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>United Kingdom, Maldives</td><td>London, Malé</td><td>July</td></tr>
+                            <tr><td>Ghana, Trinidad & Tobago, Argentina, Brazil, Namibia</td><td>Accra, Port of Spain, Buenos Aires, Brasília, Windhoek</td><td>July</td></tr>
+                            <tr><td>Cyprus, Canada, Croatia</td><td>Nicosia, Ottawa, Zagreb</td><td>June</td></tr>
+                            <tr><td>Saudi Arabia</td><td>Riyadh</td><td>April</td></tr>
+                            <tr><td>Thailand, Sri Lanka</td><td>Bangkok, Sri Jayawardenepura Kotte</td><td>April</td></tr>
+                            <tr><td>Mauritius</td><td>Port Louis</td><td>March</td></tr>
+                            <tr><td>France, USA</td><td>Paris, Washington D.C.</td><td>February</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -290,9 +340,7 @@
             const tables = document.querySelectorAll('.table-content');
 
             function showTable(tableId) {
-                // Hide all tables
                 tables.forEach(table => table.classList.add('hidden'));
-                // Show the selected table
                 const selectedTable = document.getElementById(tableId);
                 if (selectedTable) {
                     selectedTable.classList.remove('hidden');
@@ -300,9 +348,7 @@
             }
 
             function setActiveButton(targetId) {
-                // Remove active class from all buttons
                 buttons.forEach(btn => btn.classList.remove('btn-active'));
-                // Add active class to the clicked button
                 const activeButton = document.querySelector(`[data-target="${targetId}"]`);
                 if (activeButton) {
                     activeButton.classList.add('btn-active');
